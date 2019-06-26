@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+ 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Invoice Alpha</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand"><img id="alphaPng" src="./Products/alpha-logo.png" sizes="" alt="alpha logo" srcset="" ></a>
+        <h3 id="titelInNavbar" class="col-md-8 col-sm-6">Personalized Invoice editor</h3>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="ulForNavbar" class="navbar-nav mr-auto"> 
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Products/Views/products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Customers/Views/customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Supplier/supplier.html">Supplier</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mb-3 mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-primary">
+                    <div class="dropdown mb-2 mt-3">
+                        <div><h3>Suppliers</h3></div>
+                        <select class="btn btn-secondary suppliersList" type="button" id="suppliersList"
+                            aria-haspopup="true" aria-expanded="false">
+                            Supplier
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">C.U.I.</span>
+                        </div>
+                        <p class="form-control supplierCUI" aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default">--</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-sm-4">
+                <div class="panel panel-primary">
+                    <div class="dropdown mb-2 mt-3">
+                        <div><h3>Customers</h3></div>
+                        <select class="btn btn-secondary dropdown-toggle customersList redCostumerButton" type="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            Customer
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">C.U.I.</span>
+                        </div>
+                        <p class="form-control customerCUI" aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default">--</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Invoice information -->
+        <div class="row mt-5">
+            <div class="col-lg-3">
+                <div class="panel panel-primary">
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2>INVOICE</h2>
+                    </div><br>
+                    <div class="panel-heading">Series:
+                        <input class="panelInput" type="text" name="series" id="invoiceSeries">
+                    </div>
+                    <div class="panel-heading">Number:
+                        <input class="panelInput" type="text" name="number" id="invoiceNumber">
+                    </div>
+                    <div class="panel-heading">Date:
+                        <input class="panelInput" type="date" name="number" id="invoiceDate">
+                    </div><br>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        <!-- Adding a new product to the invoice  -->
+<div class="container mt-5">
+        <table class="table table-white">
+            <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Value</th>
+                    </tr>
+            </thead>
+    <th scope="row"></th>
+    <td>
+        <div class="dropdown">
+            <select class="btn btn-secondary dropdown-toggle customersList" type="button"
+           aria-haspopup="true" aria-expanded="false" id="selectedProduct">
+            Select Product</select>
+            <span class="caret"></span></button>
+        </div>
+        </td>
+        <td>
+        <div class="dropdown">
+                <select class="btn btn-secondary dropdown-toggle customersList" type="button"
+               aria-haspopup="true" aria-expanded="false" id="prodTypeBtn">
+                Product Type</select>
+            </div>
+        </td>
+        <td><input class="panelInput" type="text" name="number" id="ProdPrice"></td>
+        <td><input class="panelInput" type="text" name="number" id="ProdQty"></td>
+        <td><button class="prodToInvoice btn btn-success col-lg-12">Add Product</button></td>
+    </table>
+</div>
+        <!-- The Invoice -->
+        <div class="container pt-5">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                        <tr>
+                                <th scope="row"></th>
+                                <td><h5> </h5></td>
+                                <td><p> </p></td>
+                                <td><p> </p></td>
+                                <td><p> </p></td>
+                                <td><p> </p></td>
+                              </tr>
+                </tbody>
+            </table><br>
+        </div><br>
+    </div>
+    </div>
+    <!-- Invoice Footer -->
+    <div class="container mb-3 mt-5">
+            <div id='showGrandTotal' class="ml-5 mt-5 pt-3 pb-3">            
+                    <button class="btn btn-info col-lg-3   d-inline-block" id='grandTotal'>Calculate Total</button>
+                    <h1></h1>
+                </div >
+            </div>
+
+    <footer>
+        <!-- Bootstrap & jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="./Models/index.js"></script>
+        <script src="./Models/invoiceModel.js"></script>
+    </footer>
+</body>
+
+</html>

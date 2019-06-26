@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Products</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../main.css">
+  <link href="//db.onlinewebfonts.com/c/cc44a2fd60ec971785c2e0fdf31f2bda?family=Proxima+Nova+Rg" rel="stylesheet" type="text/css"/>
+
+<style>
+.hover:hover{
+  background-color: rgba(42, 48, 54, 1);
+  border-radius: 5%;
+  /* animation: fadeout 0.5s linear forwards; */
+  /* animation-delay: 8.5s; */
+  /* transform: translate(3%,3%); */
+}
+</style>
+</head>
+ 
+<body>
+  <!-- <div class="row"> -->
+    <!-- <div class="rotatedbackground"><div></div> -->
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <!-- LOGO -->
+      <a class="navbar-brand"><img id="alphaPng" src="../alpha-logo.png" sizes="" alt="alpha logo" srcset="" ></a>
+      <h3 id="titelInNavbar" class="col-md-8 col-sm-6">Product customization</h3>
+      <!-- Dropdown for navbar -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Links to the other pages -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul id='ulForNavbar' class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"  href="../../index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../Customers/Views/customer.html">Customer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../Supplier/supplier.html">Supplier</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- </div> -->
+  <!-- Body -->
+  <br>
+  <div class="container">
+    <br>
+    <form>
+      <h2 class="display-4 mb-4">Add a new product here</h2>
+      <div class="form-row">
+        <div class="col">
+          <div id="productName" class="md-form mt-0">
+            <!-- input for Name -->
+            <input id="productNameInput" type="text" class="form-control" placeholder="Product Name" value="">
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group mb-3">
+                <select class="custom-select" id="inputGroupSelect02">
+                  <option class="options" selected>Choose...</option>
+                  <option class="options" value="Food">Food</option>
+                  <option class="options" value="NonFood">NonFood</option>
+                  <option class="options" value="Services">Services</option>
+                </select>
+                <div class="input-group-append">
+                  <label class="input-group-text" for="inputGroupSelect02">Types</label>
+                </div>
+              </div>
+        </div>
+      </div>
+      <br>
+    </form>
+    <div class="d-flex"> 
+      <!-- Add , Update and Delete buttons  -->
+      <button class="btn btn-primary mr-4" id="addProductButton" value="">Add Product</button>
+      <button class="btn btn-primary mr-4" id="updateProductButton" value="">Update Product</button>
+      <button class="btn btn-primary mr-4" id="deleteProductButton" value="">Delete Product</button>
+    </div>
+    <br>
+  </div>
+  </div>
+
+  <!-- The Invoice -->
+  <div class="container mt-5">
+    <br>
+    <!-- Dropdown for type selection -->
+    <div class="dropdown">
+      <button class="btn btn-primary mr-4 dropdown-toggle" type="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Select Product Type
+      </button>
+      <div id="productsDropdown" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      </div>
+    </div><br>
+
+<!-- The products table -->
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Product</th>
+          <th scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody id="productViews">
+      <!-- To here comes the Products -->
+      </tbody>
+    </table><br>
+  </div>
+
+<!-- FOOTER PART  -->
+  <footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+      <script src="productsViews.js"></script>
+      <script src="../Models/productsModels.js"></script>
+  </footer>
+</body>
+
+</html>

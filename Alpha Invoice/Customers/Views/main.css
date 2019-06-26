@@ -1,0 +1,203 @@
+body{
+    /* overflow:; */
+    /* background-color: rgba(65, 124, 76, 0.9); */
+}
+.row {
+    min-height: 100px;}
+#alphaPng {
+    /* min-height: 100px; */}
+
+/* IMPORT PROXIMA NOVA RG (font-family)*/
+@import url(//db.onlinewebfonts.com/c/cc44a2fd60ec971785c2e0fdf31f2bda?family=Proxima+Nova+Rg);
+@font-face {font-family: "Proxima Nova Rg";
+    src: url("//db.onlinewebfonts.com/t/cc44a2fd60ec971785c2e0fdf31f2bda.eot");
+    src: url("//db.onlinewebfonts.com/t/cc44a2fd60ec971785c2e0fdf31f2bda.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/cc44a2fd60ec971785c2e0fdf31f2bda.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/cc44a2fd60ec971785c2e0fdf31f2bda.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/cc44a2fd60ec971785c2e0fdf31f2bda.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/cc44a2fd60ec971785c2e0fdf31f2bda.svg#Proxima Nova Rg") format("svg");}
+
+.col-lg-6 {
+    outline: 1px solid black;}
+
+.panel div {
+    text-align: center;}
+
+/* IMAGE SIZE */
+/* img{ 
+     width: 20%;
+    padding: 2%;}
+ #productName{min-width: 80%;}  */
+img {
+        /* float: right; */
+        width: 19%;}
+/* those 3 lines with dropdown button */
+.navbar-toggler-icon {width: 0.8rem;
+    float: right;
+}
+/* Logo SIZE ON PHONE DISPLAY */
+@media(max-width:600px){
+    h2{display: none;}
+    #titelInNavbar {
+        display: block;
+        float: center;
+    }
+    h3 {
+        display: inline;
+        float: right;}}
+    img{
+        width: 30%;
+        display: block;
+    }
+/* Medium display */
+@media(min-width:700px) and (min-width:800px) and (min-width:900px){
+    img{width: 15%;}
+    .navbar{width: 100%;}}
+/* Big display for logo */
+@media(min-width:1000px){
+    img{width: 22%;}
+    .navbar{width: 100%;}}
+    
+
+body, .container {font-family: 'Proxima Nova Rg';}
+#titelInNavbar {
+    /* float: right; */
+    display: none;}
+
+.navbar {
+    font-family: 'Proxima Nova Rg';
+    font-size: 2rem;}
+
+.navbar-toggler-icon {
+    margin: 2px;
+    align-content: center;
+    text-align: center;
+    float: right !important;}
+/* Button properties */
+    .btn{
+        font-family: 'Proxima Nova Rg', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        /* color: #000; */
+        color: rgb(43, 99, 53);
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;}
+        
+    .btn:hover {
+        background-color: rgba(43, 99, 53, 0.6);
+        /* background-color: #444549; */
+        box-shadow: 0px 15px 20px rgba(4, 2, 5, 0.3);
+        color: #fff;
+        transform: translateY(-7px);}
+    
+    /* Edit button color */
+    .saveCoustomerButton{
+        color:rgb(44, 181, 186);
+        background-color: #fff;}
+
+    .saveCoustomerButton:hover{
+            background-color:rgb(44, 181, 186);
+            color: #fff;}
+      /* Dropdown button colour */  
+    .dropdown-toggle{
+        color:#000;
+        background-color: #fff;}
+
+    .dropdown-toggle:hover{
+        background-color:#444549;
+        letter-spacing: 1px;
+        color: #fff;}
+    
+    .deleteButtonC {
+        color: rgb(196, 1, 60);
+        background-color: #fff;}
+
+    .deleteButtonC:hover {
+        background-color: rgba(196, 1, 60, 0.5);
+        color: #fff;}
+    
+    .input-group-text {
+        font-family: 'Proxima Nova Rg', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        /* color: #000; */
+        color: rgb(43, 99, 53);
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+        transition: all 0.3s ease 0s;
+        /* cursor: pointer; */
+        outline: none;
+        border: 1px solid rgba(59, 63, 60, 0.4);}
+
+        #inputGroupSelect02 {cursor: pointer;}
+
+        .input-group, .form-control{
+        font-family: 'Proxima Nova Rg', sans-serif;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        color: rgb(43, 99, 53);
+        background-color: #fff;
+
+        }
+    /* #alertIsNotDisplayedYet, #alertIsNotDisplayedYet a {
+    font-family: 'Proxima Nova Rg', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        color: #fff;
+        background-color: rgb(44, 181, 110);
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        text-decoration: none;
+        outline: none;
+        border: 1px solid rgba(59, 63, 60, 0.4);} */
+
+    #alertIsNotDisplayedYet a{
+            border: none;
+            color: #fff;
+            background-color: rgb(44, 181, 110);
+            font-size:1.5rem;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;}
+
+    #alertIsNotDisplayedYet a:hover{
+            background-color: #fff;
+            box-shadow: 0px 15px 20px rgba(4, 2, 5, 0.3);
+            color: rgba(43, 99, 53, 0.6);
+            transform: translateY(-7px);}
+
+    /* For the navbar parts */
+    .ulForNavbar {
+            font-family: 'Proxima Nova Rg', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* word-spacing: 5px; */
+            font-weight: 500;
+            color: rgb(43, 99, 53);
+        background-color: #fff;
+        /* border: none; */
+        border-radius: 10px;
+        /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+        transition: all 0.2s ease 0s;
+        cursor: pointer;
+        outline: none;
+        padding: 5px;}
+
+        .ulForNavbar li{transition: all 0.4s ease 0s;}
+        
+        .ulForNavbar li:hover{
+            background-color: rgba(0,0,0,0.001);
+            transform: translateY(-7px);}

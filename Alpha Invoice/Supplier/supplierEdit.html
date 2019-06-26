@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EditME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+</head>
+ 
+<body> 
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand"><img id="alphaPng" src="../Products/alpha-logo.png" sizes="" alt="alpha logo" srcset="" ></a>
+            <h3 id="titelInNavbar" class="col-md-8 col-sm-6">Supplier customization</h3>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="ulForNavbar" class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Products/Views/products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Customers/Views/customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Supplier/supplier.html">Supplier</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Body -->
+
+    <br>
+    <div class="container">
+        <h2 class="display-4 mb-4">Edit Supplier Information Here!!</h2>
+        <div class="col-sm-12 col-md-3">
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">ID</span>
+                </div>
+                <input id="supplierID" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"> Name</span>
+                </div>
+                <input id="supplierEditName" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">CUI</span>
+                </div>
+                <input id="supplierEditCui" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+
+        <!-- SUCCESS ALERT -->
+        <div id="alertIsNotDisplayedYet" class="alert alert-success" role="alert" style="display: none">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>You have successfully edited the supplier</p>
+            <hr>
+            <a onclick="displayNone('alertIsNotDisplayedYet')" href="#" class="alert-link btn">Ok</a> 
+        </div>
+        
+        <!-- DELETE ALERT -->
+        <div id="alertIsNotDisplayedYet2" class="alert alert-success" role="alert" style="display: none">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>You have successfully deleted the supplier</p>
+            <hr>
+            <a onclick="displayNone('alertIsNotDisplayedYet')" href="#" class="alert-link btn" id="deletedSupplier">Ok</a> 
+        </div>
+        <div class="d-flex">
+            <button class="btn btn-primary mr-4 mt-2" id="editSupplier">Save Changes</button>
+            <button class="btn btn-danger mr-4 mt-2" id="deleteSupplier">Delete Supplier</button>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="Models/supplierModel.js"></script>
+    <script src="Views/supplierEdit.js"></script>
+</footer>
+
+</html>
